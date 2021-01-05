@@ -25,6 +25,15 @@ function App() {
     fetchJobs();
   }, []);
 
+  // setup the return condition
+  if(loading) {
+    return(
+      <section className ="section loading">
+        <h1>Loading...</h1>
+      </section>
+    );
+  }
+
   return(
     <>
       <h2>tabs project setup</h2>
