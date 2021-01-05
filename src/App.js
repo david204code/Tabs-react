@@ -15,9 +15,21 @@ function App() {
     const response = await fetch(url);
     // turn data into json method
     const newJobs = await response.json();
+    setJobs(newJobs);
+    setLoading(false);
   }
 
-  return <h2>tabs project setup</h2>
+  // useEffect to run the function, empty array at the end to run once
+  useEffect(() => {
+    // invoked the function
+    fetchJobs();
+  }, []);
+
+  return(
+    <>
+      <h2>tabs project setup</h2>
+    </>    
+  ) 
 }
 
 export default App
