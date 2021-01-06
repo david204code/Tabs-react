@@ -53,7 +53,9 @@ function App() {
           {
             jobs.map((item, index) => {
               return(
-                <button key ={item.id}>
+                <button key ={item.id}
+                  onClick ={() => setValue(index)}
+                >
                   {item.company}
                 </button>
               );
