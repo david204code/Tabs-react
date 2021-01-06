@@ -55,6 +55,8 @@ function App() {
               return(
                 <button key ={item.id}
                   onClick ={() => setValue(index)}
+                  // add template sting with interpolation for the condition to add active-btn class
+                  className ={`job-btn ${index === value && 'active-btn'}`}
                 >
                   {item.company}
                 </button>
